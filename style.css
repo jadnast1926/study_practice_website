@@ -57,3 +57,73 @@ a:focus-visible {
   outline: 2px solid #ffc700;
   outline-offset: 3px;
 }
+
+/* ===== Шапка ===== */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #000;
+  color: #fff;
+}
+
+.header__inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 18px 40px;
+  font-size: 14px;
+}
+
+.nav__list {
+  display: flex;
+  gap: 48px;
+}
+
+.nav__list a {
+  transition: color 0.2s;
+}
+
+.nav__list a:hover {
+  color: #ffc700;
+}
+
+.header__contacts {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.contact {
+  position: relative;
+  padding-left: 22px;
+  white-space: nowrap;
+}
+
+.contact::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 12px;
+  height: 12px;
+  transform: translateY(-50%);
+  border: 1.5px solid #fff;
+}
+
+.contact--phone::before {
+  border-radius: 3px 3px 3px 8px;
+}
+
+.contact--mail::before {
+  height: 9px;
+  border-radius: 1px;
+}
+
+.menu-toggle,
+.burger {
+  display: none;
+}
