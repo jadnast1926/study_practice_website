@@ -288,3 +288,185 @@ a:focus-visible {
 .why__item p {
   font-size: 13px;
 }
+
+/* ===== Планшет ===== */
+@media (max-width: 1024px) {
+  .header__inner {
+    padding: 16px 24px;
+  }
+
+  .nav__list {
+    gap: 28px;
+  }
+
+  .header__contacts {
+    gap: 20px;
+  }
+
+  .about__row {
+    gap: 32px;
+  }
+
+  .why__grid {
+    gap: 28px 40px;
+  }
+}
+
+/* ===== Мобильная версия ===== */
+@media (max-width: 768px) {
+  body {
+    font-size: 15px;
+  }
+
+  .header__inner {
+    padding: 14px 20px;
+  }
+
+  .burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28px;
+    height: 20px;
+    cursor: pointer;
+  }
+
+  .burger span {
+    display: block;
+    height: 2px;
+    background: #fff;
+    border-radius: 2px;
+    transition: transform 0.25s, opacity 0.25s;
+  }
+
+  .menu-toggle:checked + .burger span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+
+  .menu-toggle:checked + .burger span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle:checked + .burger span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+
+  .menu-toggle:focus-visible + .burger {
+    outline: 2px solid #ffc700;
+    outline-offset: 4px;
+  }
+
+  .nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 8px 20px 20px;
+    background: #000;
+    border-top: 1px solid #333;
+  }
+
+  .menu-toggle:checked ~ .nav {
+    display: block;
+  }
+
+  .nav__list {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .nav__list a {
+    display: block;
+    padding: 14px 0;
+    border-bottom: 1px solid #222;
+  }
+
+  .contact--mail {
+    display: none;
+  }
+
+  .hero {
+    min-height: 0;
+    padding: 56px 20px 64px;
+  }
+
+  .logo {
+    margin-bottom: 28px;
+  }
+
+  .hero__title {
+    font-size: 22px;
+  }
+
+  .hero__list {
+    font-size: 14px;
+  }
+
+  .btn {
+    display: block;
+    padding: 16px 20px;
+    text-align: center;
+  }
+
+  .about {
+    padding: 56px 0;
+  }
+
+  .about__title {
+    margin-bottom: 32px;
+    font-size: 24px;
+  }
+
+  .about__row,
+  .about__row--reverse {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-bottom: 36px;
+  }
+
+  .about__row .about__img--designer {
+    order: -1;
+  }
+
+  .about__img {
+    height: 220px;
+  }
+
+  .why {
+    padding: 56px 0;
+    background: linear-gradient(180deg, #4a4a4a 0%, #8c8c8c 100%);
+  }
+
+  .why__title {
+    margin-bottom: 36px;
+    font-size: 18px;
+  }
+
+  .why__grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+}
+
+/* ===== Узкие телефоны ===== */
+@media (max-width: 380px) {
+  .hero__title {
+    font-size: 19px;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  * {
+    transition: none !important;
+  }
+}
